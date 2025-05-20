@@ -1,4 +1,4 @@
-//src/components/CheckoutComponents/AddressForm.jsx
+//src/components/CheckoutPageComponents/infoMobile.jsx
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';

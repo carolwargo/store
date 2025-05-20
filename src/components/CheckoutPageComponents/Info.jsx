@@ -1,4 +1,4 @@
-//src/components/CheckoutComponents/AddressForm.jsx
+//src/components/CheckoutPageComponents/info.jsx
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import List from '@mui/material/List';

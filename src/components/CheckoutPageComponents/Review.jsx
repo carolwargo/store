@@ -1,6 +1,4 @@
-//src/components/CheckoutComponents/AddressForm.jsx
 // src/components/CheckoutPageComponents/Review.jsx
-import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

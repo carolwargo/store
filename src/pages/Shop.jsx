@@ -30,7 +30,7 @@ export default function Shop() {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    navigate('/store/checkout');
+    navigate('/checkout');
   };
 
   return (

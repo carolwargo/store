@@ -1,4 +1,4 @@
-//src/components/CheckoutComponents/AddressForm.jsx
+//src/components/CheckoutPageComponents/PaymentForm.jsx
 import * as React from 'react';
 import Alert from '@mui/material/Alert';
 import Box from '@mui/material/Box';
