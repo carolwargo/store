@@ -1,0 +1,85 @@
+// src/data/products.js
+export const products = [
+  {
+    id: 1,
+    category: 'Learning Materials',
+    name: 'How to Master Makeup Artistry',
+    description: 'A comprehensive video course covering professional makeup techniques, including contouring, blending, and special effects.',
+    price: 49.99,
+    image: 'https://placehold.co/600x400?text=Makeup+Course',
+    details: {
+      duration: '10 hours',
+      lessons: 25,
+      format: 'Video + PDF Guides',
+      instructor: 'Jane Doe, Celebrity Makeup Artist',
+    },
+  },
+  {
+    id: 2,
+    category: 'Beauty Products',
+    name: 'Hydrating Face Cream',
+    description: 'A luxurious cream with hyaluronic acid and aloe vera for radiant, moisturized skin.',
+    price: 29.99,
+    image: 'https://placehold.co/600x400?text=Face+Cream',
+    details: {
+      size: '50ml',
+      ingredients: 'Hyaluronic Acid, Aloe Vera, Vitamin E',
+      usage: 'Apply morning and night to cleansed skin.',
+    },
+  },
+  {
+    id: 3,
+    category: 'Subscriptions',
+    name: 'Monthly Beauty Box',
+    description: 'A curated selection of premium beauty products delivered to your door every month.',
+    price: 19.99,
+    subscription: 'Monthly',
+    image: 'https://placehold.co/600x400?text=Beauty+Box',
+    details: {
+      contents: '5-7 full-size and sample products',
+      billing: 'Renews monthly, cancel anytime',
+      shipping: 'Free shipping within the US',
+    },
+  },
+  {
+    id: 4,
+    category: 'Learning Materials',
+    name: 'Skincare Basics Guide',
+    description: 'An e-book with expert tips for building a skincare routine for glowing skin.',
+    price: 19.99,
+    image: 'https://placehold.co/600x400?text=Skincare+Guide',
+    details: {
+      pages: 120,
+      format: 'PDF',
+      author: 'Dr. Emily Smith, Dermatologist',
+    },
+  },
+  {
+    id: 5,
+    category: 'Beauty Products',
+    name: 'Matte Lipstick Set',
+    description: 'A set of 5 vibrant, long-lasting matte lipsticks in bold shades.',
+    price: 39.99,
+    image: 'https://placehold.co/600x400?text=Lipstick+Set',
+    details: {
+      shades: 'Red, Nude, Pink, Berry, Coral',
+      finish: 'Matte, long-wear',
+      crueltyFree: 'Yes',
+      
+    },
+  },
+  {
+    id: 6,
+    category: 'Subscriptions',
+    name: 'Annual Learning Pass',
+    description: 'Unlimited access to all how-to courses for a year, including makeup and skincare tutorials.',
+    price: 199.99,
+    subscription: 'Yearly',
+    image: 'https://placehold.co/600x400?text=Learning+Pass',
+    details: {
+      access: 'All courses, new releases included',
+      billing: 'Renews yearly, cancel anytime',
+      platform: 'Accessible on web and mobile',
+    },
+  },
+];
