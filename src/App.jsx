@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { ThemeProvider, createTheme, AppBar, Toolbar, Typography, Button, Container, CssBaseline, Box } from '@mui/material';
+import { ThemeProvider, createTheme, AppBar, IconButton, Toolbar, Typography, Button, Container, CssBaseline, Box } from '@mui/material';
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
@@ -33,19 +33,23 @@ function Navbar() {
     <AppBar position="static">
       <Toolbar sx={{ flexWrap: { xs: 'wrap', sm: 'nowrap' }, justifyContent: 'space-between', py: { xs: 1, sm: 0 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <LogoIcon />
+        <IconButton component={Link} to="/" sx={{fontSize: {  sm: '1rem', color:'white' } }}>
+  <LogoIcon />
+</IconButton>
+{/** 
           <Typography variant="h6" sx={{ ml: 2, fontSize: { xs: '1rem', sm: '1.25rem' }, display: { xs: 'none', sm: 'block' } }}>
             My Online Store
           </Typography>
+          */}
         </Box>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: { xs: 1, sm: 0 }, justifyContent: { xs: 'center', sm: 'flex-end' } }}>
-          <Button color="inherit" component={Link} to="/store/" sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0, mt: { xs: 1, sm: 0 }, justifyContent: { xs: 'center', sm: 'flex-end' } }}>
+          <Button color="inherit" component={Link} to="/" sx={{ fontSize: { xs: '0.875rem', sm: '0.875rem' } }}>
             Home
           </Button>
-          <Button color="inherit" component={Link} to="/store/shop" sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
+          <Button color="inherit" component={Link} to="/shop" sx={{ fontSize: { xs: '0.875rem', sm: '0.875rem' } }}>
             Shop
           </Button>
-          <Button color="inherit" component={Link} to="/store/checkout" sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
+          <Button color="inherit" component={Link} to="/checkout" sx={{ fontSize: { xs: '0.875rem', sm: '0.875rem' } }}>
             <ShoppingCartIcon />
             <Typography sx={{ ml: 1 }}>({cart.length})</Typography>
           </Button>
