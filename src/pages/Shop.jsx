@@ -1,5 +1,5 @@
 // src/pages/Shop.jsx
-import  { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Box,
@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useCart } from '../context/CartContext';
-import { products } from '../data/products';
+import { products } from '../data/products.jsx';
 
 export default function Shop() {
   const [category, setCategory] = useState('All');
@@ -90,7 +90,7 @@ export default function Shop() {
                   variant="outlined"
                   onClick={() => {
                     console.log('Navigating to /store/product/', product.id);
-                    navigate(`/product/${product.id}`); // Absolute path
+                    navigate(`/product/${product.id}`);
                   }}
                   fullWidth
                   sx={{ mt: 1 }}

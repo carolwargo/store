@@ -1,5 +1,5 @@
 // src/pages/ViewDetails.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -12,10 +12,10 @@ import {
   CardMedia,
   Alert,
 } from '@mui/material';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useCart } from '../context/CartContext';
-import { products } from '../data/products';
+import { products } from '../data/products.jsx';
 
 export default function ViewDetails() {
   const { id } = useParams();

@@ -1,6 +1,7 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ThemeProvider, createTheme, AppBar, Toolbar, Typography, Button, Container, CssBaseline, Box } from '@mui/material';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import CheckoutPage from './pages/CheckoutPage';
@@ -10,6 +11,9 @@ import ViewDetails from './pages/ViewDetails';
 import LogoIcon from './components/CheckoutPageComponents/LogoIcon';
 import { CartProvider, useCart } from './context/CartContext';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary.jsx'
+
 
 const theme = createTheme({
   palette: {
@@ -57,20 +61,59 @@ export default function App() {
     <CartProvider>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router basename="/store/">
-          <Navbar />
-          <Container sx={{ mt: 4, mb: 4 }}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/product/:id" element={<ViewDetails />} />
-              <Route path="/checkout" element={<CheckoutPage />} />
-              <Route path="/order-confirmation" element={<OrderConfirmation />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Container>
-        </Router>
+        <HelmetProvider>
+          <Router basename="/store/">
+          <ErrorBoundary>
+            <Navbar />
+            <Container sx={{ mt: 4, mb: 4 }}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/product/:id" element={<ViewDetails />} />
+                <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/order-confirmation" element={<OrderConfirmation />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Container>
+            </ErrorBoundary>
+          </Router>
+        </HelmetProvider>
       </ThemeProvider>
     </CartProvider>
   );
 }
+
+/**
+ * store/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   └── CheckoutPageComponents/
+│   │       ├── AddressForm.jsx
+│   │       ├── Info.jsx
+│   │       ├── InfoMobile.jsx
+│   │       ├── LogoIcon.jsx
+│   │       ├── PaymentForm.jsx
+│   │       └── Review.jsx
+│   ├── context/
+│   │   └── CartContext.jsx
+│   ├── data/
+│   │   └── products.js
+│   ├── pages/
+│   │   ├── App.jsx
+│   │   ├── CheckoutPage.jsx
+│   │   ├── Home.jsx
+│   │   ├── NotFound.jsx
+│   │   ├── OrderConfirmation.jsx
+│   │   ├── Shop.jsx
+│   │   └── ViewDetails.jsx
+│   ├── App.jsx (alternative, if in root)
+│   ├── main.jsx
+│   └── index.css (if applicable)
+├── package.json
+├── vite.config.js
+└── README.md (optional)
+ */

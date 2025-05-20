@@ -1,4 +1,4 @@
-// src/data/products.js
+// src/data/products.jsx
 export const products = [
   {
     id: 1,
@@ -65,7 +65,6 @@ export const products = [
       shades: 'Red, Nude, Pink, Berry, Coral',
       finish: 'Matte, long-wear',
       crueltyFree: 'Yes',
-      
     },
   },
   {
